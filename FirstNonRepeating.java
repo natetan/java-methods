@@ -9,7 +9,10 @@ import java.util.HashSet;
 public class FirstNonRepeating {
 
 	public static void main(String[] args) {
-		
+		System.out.println(function("aab")); // should return b
+		System.out.println(function("apples")); // should return a
+		System.out.println(function("yards")); // should return y
+		System.out.println(function("too")); // should return t
 	}
 
 	public static String function(String s) {
