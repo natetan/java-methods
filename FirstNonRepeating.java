@@ -15,9 +15,9 @@ public class FirstNonRepeating {
 		System.out.println(function("too")); // should return t
 	}
 
-	public static String function(String s) {
-		Set<String> unique = new HashSet<String>();
-		Set<String> nonunique = new HashSet<String>();
+	public static Character function(String s) { // s: aab, apples
+		Set<Character> unique = new HashSet<Character>(); // ab, aples
+		Set<Character> nonunique = new HashSet<Character>(); // a, p
 
 		for (int i = 0; i < s.length(); i++) {
 			if (unique.contains(s.charAt(i))) {
@@ -26,9 +26,11 @@ public class FirstNonRepeating {
 				unique.add(s.charAt(i));
 			}
 		}
-
 		for (int i = 0; i < s.length(); i++) {
-			
+			if (!nonunique.contains(s.charAt(i))) {
+				return s.charAt(i);
+			}
 		}
+		return '';
 	}
 }
